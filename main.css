@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1556740714-a8395b3bf30e') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.budget-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.budget-container h2 {
+    color: #f8f9fa;
+}
+
+.budget-container .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f8f9fa;
+    border: none;
+    padding: 12px 15px;
+}
+
+.budget-container .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.budget-container .btn-success, .budget-container .btn-danger {
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.budget-container .btn-success {
+    background: linear-gradient(45deg, #28a745, #34d058);
+}
+
+.budget-container .btn-success:hover {
+    background: linear-gradient(45deg, #34d058, #28a745);
+}
+
+.budget-container .btn-danger {
+    background: linear-gradient(45deg, #dc3545, #f46a6a);
+}
+
+.budget-container .btn-danger:hover {
+    background: linear-gradient(45deg, #f46a6a, #dc3545);
+}

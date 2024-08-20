@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+<div class="container vh-100">
+    <button onclick="logout()" class="btn btn-secondary mt-3">Logout</button>
+    <div class="budget-container p-4 rounded mt-3">
+        <h2 class="text-center mb-4">Budget Calculator</h2>
+        <div class="row">
+            <!-- Income Section -->
+            <div class="col-md-6">
+                <div class="income-section">
+                    <h4 class="text-center mb-3">Income</h4>
+                    <div class="form-group">
+                        <input id="income" type="text" class="form-control" placeholder="Income Type" required>
+                    </div>
+                    <div class="form-group">
+                        <input id="amount" type="number" class="form-control" placeholder="Income Amount" required>
+                    </div>
+                    <button onclick="addIncome()" type="submit" class="btn btn-success btn-block">Add Income</button>
+                    <!-- Income Table -->
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Date & Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="incomeList">
+                                <!-- Income Data will be inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Expense Section -->
+            <div class="col-md-6">
+                <div class="expense-section">
+                    <h4 class="text-center mb-3">Expense</h4>
+                    <div class="form-group">
+                        <input id="expense" type="text" class="form-control" placeholder="Expense Type" required>
+                    </div>
+                    <div class="form-group">
+                        <input id="expenseAmount" type="number" class="form-control" placeholder="Expense Amount" required>
+                    </div>
+                    <button onclick="addExpense()" type="submit" class="btn btn-danger btn-block">Add Expense</button>
+                    <!-- Expense Table -->
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Date & Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="expenseList">
+                                <!-- Expense Data will be inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="totalIncome" class="text-center mt-4"></div>
+        <!-- Reset Button -->
+        <button onclick="resetBudget()" class="btn btn-warning btn-block mt-4">Reset</button>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+<!-- Bootstrap JS (Optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.11/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
